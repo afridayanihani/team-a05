@@ -1,0 +1,49 @@
+@media (max-width:670px){
+    header{
+      width: 100%;
+      margin: 0; 
+    }
+    .logo-header {
+        float: none;
+        text-align: center;
+        text-align: center;
+    }
+    
+  .footer-col{
+    width: 100%;
+}
+.biodata{
+  float: none;
+  margin-top: 50px;
+  margin-left: 300px;
+  margin-right: 0px;
+}
+.overlay img {
+  margin-right: 0px;
+}
+.this, .is, .us, .team, .a05{
+  font-size: 50px;
+}
+    }
+
+  
+  @media (max-width: 1000px) {
+      .list-header a {
+        font-size: 12px;
+        font-weight: normal;
+      }
+      .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .this, .is, .us, .team, .a05{
+      font-size: 70px;
+  }
+  .biodata{
+    margin-top: -300px;
+    margin-left: 700px;
+}
+.overlay img {
+    margin-right: 400px;
+}
+  }

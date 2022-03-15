@@ -1,0 +1,393 @@
+* Annie Leonhart */
+*{
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+/* Annie Leonhart */
+body{
+    background : #c2edec
+}
+h1{
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
+}
+.body h2{
+    padding-top: 10px;
+    font-size: 64px;
+    text-align: center;
+    color: #388087;
+    top: 100px;
+}
+.kontainer{
+    width: fit-content;
+    height: fit-content;
+    background-color: #6fb3b8;
+    margin: 100px auto;
+    padding: 20px;
+    /* box-shadow: 0 0 3px 3px rgba(0,0,0,.3); */
+    border-radius: 5px;
+    color:#f6f6f2
+}
+.galeri1 .orang1, .galeri2 .orang2, .galeri3 .orang3, .galeri4 .orang4, .galeri5 .orang5, .this, .is, .us, .team, .a05{
+    width: 150px;
+    height: 150px;
+    float: left;
+    position: relative;
+    list-style: none;
+}
+.orang1, .orang2, .orang3, .orang4, .orang5{
+    border-radius: 50%;
+    border: 5px solid #badfe7;
+    margin-top: -10px;
+}
+.this, .orang2{
+    margin-left:100px ;
+}
+.us, .orang4{
+    margin-left: 150px;
+}
+.is{
+    margin-left: 30px;
+    top: 20px;
+}
+.team{
+    margin-left: -20px;
+}
+.a05{
+    margin-left: 110px;
+}
+.this, .is, .us, .team, .a05{
+    font-size: 100px;
+}
+.biodata{
+    float: right;
+    margin-right: 190px;
+    margin-top: 100px;
+    color: white;
+    font-size: 36px;
+    text-align: justify;
+}
+.biodata li{
+    list-style: none;
+    margin: 20px 0;
+}
+.galeri1 li a img, .galeri2 li a img, .galeri3 li a img, .galeri4 li a img, .galeri5 li a img{
+    border-radius: 50%;
+}
+.galeri1 li span, .galeri2 li span, .galeri3 li span, .galeri4 li span, .galeri5 li span{
+    display: block;
+    background-color: rgba(200,200,200,.5);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 150px;
+    font-size: 30px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+    transform: scale(0) rotate(0);
+    transition: .3s;
+}
+.galeri1 li a:hover span, .galeri2 li a:hover span, .galeri3 li a:hover span, .galeri4 li a:hover span, .galeri5 li a:hover span{
+    opacity: 1;
+    transform: scale(1);
+}
+.clear{
+    clear: both;
+}
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0);
+	z-index: 9999;
+	transition: .8s;
+	text-align: center;
+	padding: 100px 0;
+    color: white;
+    font-weight: normal;
+    margin-top: -30px;
+}
+.overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background: #388087;
+    overflow: scroll;
+}
+
+.overlay img {
+	max-height: 100%;
+	box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+    margin-right: -300px;
+    margin-left: 0px;
+    margin-top: 50px;
+}
+
+.overlay:target img {
+	animation: zoomDanFade 1s;
+}
+.overlay:target .biodata {
+	animation: zoomDanFade 1s;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 50px;
+	left: 95%;
+	margin-left: -20px;
+	color: #6fb3b8;
+	text-decoration: none;
+	background-color:#badfe7;
+	line-height: 14px;
+	padding: 5px;
+	opacity: 0;
+    font-size: 24px;
+}
+
+.overlay:target .close {
+	animation: slideDownFade .5s .5s forwards;
+}
+.next{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    opacity: 0;
+}
+.prev{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    opacity: 0;
+}
+.overlay:target .next{
+    animation: fade .5s .5s forwards;
+}
+.overlay:target .prev{
+    animation: fade .5s .5s forwards;
+}
+.fa {
+    padding: 5px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+.fa:hover {
+      opacity: 0.7;
+  }
+.fa-instagram {
+    background: #FF1493;
+    color: white;
+  }
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+@keyframes fade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes zoomDanFade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideDownFade{
+    0%{
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 1330px) {
+    .biodata{
+        float: none;
+        margin-top: 50px;
+        margin-left: 300px;
+        margin-right: 0px;
+    }
+    .overlay img {
+        margin-right: 0px;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .biodata{
+        margin-top: -300px;
+        margin-left: 700px;
+    }
+    .overlay img {
+        margin-right: 400px;
+    }
+}
+/* Annie Leonhart */
+
+main{
+    background-image: url(img/heding.png);
+    background-position: 0 -10em;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+.wrapper    {
+    padding: 3em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+.wrapper .left {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    box-sizing: border-box;
+}
+.wrapper h2 {
+    font-size: 3em;
+    color: #041C32;
+    text-shadow: 0 1px 0 #B1D0E0, 0 2px 0 #6998AB, 0 3px 0 #406882, 0 4px 0 #30475E, 0 5px 0 #1A374D, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.wrapper p {
+    width: 60%;
+    padding: 1.1em;
+    letter-spacing: -0.3px;
+    color: #041C32;
+}
+.wrapper .sign-up {
+	box-shadow: 0px 1px 0px 0px #D3DEDC;
+	background:linear-gradient(to bottom, #6998AB 5%,#406882 40%, #1A374D 100%);
+	background-color:#94B49F;
+    border-radius: 3%;
+	border:0px solid #B1D0E0;
+	display:inline-block;
+	cursor:pointer;
+	color: #e5e6e6;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:1.1em;
+	font-weight:600;
+    letter-spacing: 1px;
+	padding: 0.8em 2em;
+	text-shadow:0px 1px 0px #99A799;
+}
+.wrapper img{
+    width: 50%;
+}
+.sign-up:hover {
+	background:linear-gradient(to bottom, #1A374D 5%,#1A374D 40%, #1A374D 100%);
+	background-color:#99A799;
+}
+.sign-up:active {
+	position:relative;
+	top: 1px;
+}
+@media screen and (max-width: 600px) {
+    .wrapper{
+      display: block;
+      padding: 5%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    .wrapper h2{
+        text-align: center;
+    }
+    .wrapper h2 span {
+        font-size: 1.5em;
+    }
+    .wrapper p  {
+        text-align: justify;
+        width: 100%;
+        padding: inherit;
+        padding: 5% 0;
+    }
+    .wrapper img {
+        display: block;
+        width: 100%;
+    }
+    .wrapper .sign-up{
+        font-size: inherit;
+        margin-bottom: 30px;
+    }
+}
+/* Annie Leonhart */
+@keyframes fade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes zoomDanFade{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideDownFade{
+    0%{
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 1330px) {
+    .biodata{
+        float: none;
+        margin-top: 50px;
+        margin-left: 300px;
+        margin-right: 0px;
+    }
+    .overlay img {
+        margin-right: 0px;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .biodata{
+        margin-top: -300px;
+        margin-left: 700px;
+    }
+    .overlay img {
+        margin-right: 400px;
+    }
+}
